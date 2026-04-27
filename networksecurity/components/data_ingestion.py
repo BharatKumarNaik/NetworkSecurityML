@@ -45,9 +45,10 @@ class DataIngestion:
     # we will export the data into feature store in csv format and read from there for further processing 
     def export_data_into_feature_store(self, df: pd.DataFrame):
         try:
-            feature_store_dir = os.path.dirname(self.data_ingestion_config.feature_store_file_path)
-            os.makedirs(feature_store_dir, exist_ok=True)
-            df.to_csv(self.data_ingestion_config.feature_store_file_path, index=False)
+            feature_store_path = os.path.dirname(self.data_ingestion_config.feature_store_path)
+            os.makedirs(feature_store_path, exist_ok=True)
+            df.to_csv(self.data_ingestion_config.feature_store_path, index=False)
+            logging.info(f"Exporting feature store to {self.data_ingestion_config.feature_store_path}")
             return df
         except Exception as e:
             raise NetworkSecurityException(e, sys) from e

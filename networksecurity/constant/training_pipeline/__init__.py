@@ -11,7 +11,7 @@ FILE_NAME: str = "phisingData.csv"
 
 TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"    
-
+DATA_INGESTION_FEATURE_STORE_FILENAME:str = "raw_data.csv"
 
 # Data Ingestion related constant variables
 DATA_INGESTION_COLLECTION_NAME: str = "PhishingData"

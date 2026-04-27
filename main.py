@@ -8,9 +8,9 @@ if __name__ == "__main__":
     try:
         trainingpipelineconfig = TrainingPipelineConfig()
         data_ingestion_config = DataIngestionConfig(trainingpipelineconfig)
-        data_ingestion_artifact = DataIngestion(DataIngestionConfig)
+        data_ingestion = DataIngestion(data_ingestion_config)
         logging.info("Initiate Data Ingestion")
-        data_ingestion_artifact = DataIngestion.initiate_data_ingestion()
+        data_ingestion_artifact = data_ingestion.initiate_data_ingestion()
         print(data_ingestion_artifact)
 
     except Exception as e:

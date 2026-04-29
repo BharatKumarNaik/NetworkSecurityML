@@ -4,3 +4,7 @@
 #### Data Ingestion Flow
 ![alt text](ReadmeFolder/DataIngestion.png)
 
+#### Data Validation
+- Schema Validation
+- Data Drift
+- Column Validation

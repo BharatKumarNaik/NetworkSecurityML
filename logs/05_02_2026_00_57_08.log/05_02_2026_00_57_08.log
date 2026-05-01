@@ -1,0 +1,17 @@
+[2026-05-02 00:57:11,020] 13 root INFO - Initiate Data Ingestion
+[2026-05-02 00:57:11,020] 73 root INFO - Initiating data ingestion
+[2026-05-02 00:57:23,482] 51 root INFO - Exporting feature store to artifact\2026-05-02-00-57-09\data_ingestion\feature_store\raw_data.csv
+[2026-05-02 00:57:23,485] 60 root INFO - Train set and test set are splitted with test size 0.2
+[2026-05-02 00:57:23,550] 65 root INFO - Exporting train set to artifact\2026-05-02-00-57-09\data_ingestion\ingested\train.csv
+[2026-05-02 00:57:23,566] 67 root INFO - Exporting test set to artifact\2026-05-02-00-57-09\data_ingestion\ingested\test.csv
+[2026-05-02 00:57:23,566] 16 root INFO - Data Ingestion Completed\u2705
+[2026-05-02 00:57:23,566] 20 root INFO - Initiate the data validation
+[2026-05-02 00:57:23,676] 31 root INFO - Required number of columns: 2
+[2026-05-02 00:57:23,676] 32 root INFO - DataFrame has 31 columns
+[2026-05-02 00:57:23,676] 78 root WARNING - Train dataframe does not contain all columns.
+
+[2026-05-02 00:57:23,676] 31 root INFO - Required number of columns: 2
+[2026-05-02 00:57:23,676] 32 root INFO - DataFrame has 31 columns
+[2026-05-02 00:57:23,679] 82 root WARNING - Test dataframe does not contain all columns.
+
+[2026-05-02 00:57:23,863] 23 root INFO - Data Validation Completed

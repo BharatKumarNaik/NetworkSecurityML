@@ -19,7 +19,7 @@ class DataValidation:
         except Exception as e:
             raise NetworkSecurityException(e,sys)
     
-    @staticmethod
+    @staticmethod # why this decorator: Cannot access or modify instance attributes (self) or class attributes (cls). Useful for utility/helper functions that are related to the class but don’t need object or class state.
     def read_data(file_path)->pd.DataFrame:
         try:
             return pd.read_csv(file_path)
@@ -103,6 +103,6 @@ class DataValidation:
                 invalid_test_file_path=None,
                 drift_report_file_path=self.data_validation_config.drift_report_file_path,
             )
-
+            return data_validation_artifact
         except Exception as e:
             raise NetworkSecurityException(e,sys)

@@ -65,6 +65,7 @@ class DataValidation:
 
     def initiate_data_validation(self)->DataValidationArtifact:
         try:
+            logging.info("Starting Data Validation")
             train_file_path = self.data_ingestion_artifact.train_file_path
             test_file_path = self.data_ingestion_artifact.test_file_path
 

@@ -21,3 +21,15 @@ Types of Data Drift:
 </br>
 
 ![alt text](ReadmeFolder/DataValidation_Flow.png)
+
+
+## Data Transformation Flow
+#### - SMOTE-Tomek
+SMOTE-Tomek is a hybrid resampling technique that combines:
+- **SMOTE**: Generates synthetic samples for the minority class to balance the dataset.
+- **Tomek Links**: Removes overlapping and noisy samples between classes.
+
+**Why use it?**  
+It improves class balance while cleaning class boundaries, helping machine learning models achieve better performance and generalization on imbalanced datasets.
+
+![alt text](ReadmeFolder/DataTransformation.png)

@@ -33,3 +33,7 @@ SMOTE-Tomek is a hybrid resampling technique that combines:
 It improves class balance while cleaning class boundaries, helping machine learning models achieve better performance and generalization on imbalanced datasets.
 
 ![alt text](ReadmeFolder/DataTransformation.png)
+
+
+## Model Trainer Flow
+![alt text](ReadmeFolder/ModelTrainer.png)

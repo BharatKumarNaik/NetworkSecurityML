@@ -1,0 +1,29 @@
+[2026-05-24 23:25:00,408] 16 root INFO - Initiate Data Ingestion
+[2026-05-24 23:25:00,408] 73 root INFO - Initiating data ingestion
+[2026-05-24 23:25:09,661] 51 root INFO - Exporting feature store to artifact\2026-05-24-23-24-58\data_ingestion\feature_store\raw_data.csv
+[2026-05-24 23:25:09,661] 60 root INFO - Train set and test set are splitted with test size 0.2
+[2026-05-24 23:25:09,724] 65 root INFO - Exporting train set to artifact\2026-05-24-23-24-58\data_ingestion\ingested\train.csv
+[2026-05-24 23:25:09,740] 67 root INFO - Exporting test set to artifact\2026-05-24-23-24-58\data_ingestion\ingested\test.csv
+[2026-05-24 23:25:09,740] 19 root INFO - Data Ingestion Completed\u2705
+[2026-05-24 23:25:09,756] 23 root INFO - Initiate the data validation
+[2026-05-24 23:25:09,756] 68 root INFO - Starting Data Validation
+[2026-05-24 23:25:09,835] 32 root INFO - Required number of columns: 31
+[2026-05-24 23:25:09,835] 33 root INFO - DataFrame has 31 columns
+[2026-05-24 23:25:09,835] 32 root INFO - Required number of columns: 31
+[2026-05-24 23:25:09,835] 33 root INFO - DataFrame has 31 columns
+[2026-05-24 23:25:09,994] 26 root INFO - Data Validation Completed
+[2026-05-24 23:25:09,994] 53 root INFO - Entered initiate_data_transformation method of DataTransformation Class
+[2026-05-24 23:25:09,994] 55 root INFO - Starting Data Transformation
+[2026-05-24 23:25:10,051] 41 root INFO - Entered get_data_transformer_object of DataTransformation class
+[2026-05-24 23:25:10,051] 45 root INFO - Initialized with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2026-05-24 23:25:10,070] 43 root INFO - Entered the save_object method
+[2026-05-24 23:25:10,072] 47 root INFO - Pickle file saved successfully
+[2026-05-24 23:25:10,072] 31 root INFO - Data Transformation Completed
+[2026-05-24 23:25:10,073] 117 root INFO - Model Trainer Initiated
+[2026-05-24 23:25:10,088] 44 root INFO - Models used are ['Random Forest', 'Decision Tree', 'Gradient Boosting', 'Logistic Regression', 'AdaBoost']
+[2026-05-24 23:25:10,088] 74 root INFO - Evaluating Models with hyper-parameters
+[2026-05-24 23:29:15,655] 84 root INFO - Best Model: Random Forest, Best Model Score: 0.9099387504696795
+[2026-05-24 23:29:15,736] 43 root INFO - Entered the save_object method
+[2026-05-24 23:29:15,736] 47 root INFO - Pickle file saved successfully
+[2026-05-24 23:29:15,736] 111 root INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='artifact\\2026-05-24-23-24-58\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9908610885458976, precision_score=0.9886524822695035, recall_score=0.9930795847750865), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9804078368652539, precision_score=0.9753381066030231, recall_score=0.9855305466237942))
+[2026-05-24 23:29:15,739] 38 root INFO - Model Training Completed

@@ -24,7 +24,13 @@ from sklearn.ensemble import (
 )
 
 import mlflow
-
+import dagshub
+dagshub.init(repo_owner='BharatKumarNaik', repo_name='NetworkSecurityML', mlflow=True)
+'''
+dagshub is connected to my github repo, 
+whatever experiment log is created by mlflow will be directly loaded into dagshub.
+Experiment tracking with Remote Repo.
+'''
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig, data_transformation_artifact:DataTransformationArtifact):

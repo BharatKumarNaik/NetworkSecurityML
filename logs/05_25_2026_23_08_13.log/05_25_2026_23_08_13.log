@@ -1,0 +1,37 @@
+[2026-05-25 23:09:49,655] 1025 httpx INFO - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+[2026-05-25 23:09:50,785] 1025 httpx INFO - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+[2026-05-25 23:09:51,819] 1025 httpx INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-05-25 23:09:51,828] 107 dagshub INFO - Accessing as BharatKumarNaik
+[2026-05-25 23:09:53,364] 1025 httpx INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/BharatKumarNaik/NetworkSecurityML "HTTP/1.1 200 OK"
+[2026-05-25 23:09:54,486] 1025 httpx INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-05-25 23:09:54,488] 107 dagshub INFO - Initialized MLflow to track repo "BharatKumarNaik/NetworkSecurityML"
+[2026-05-25 23:09:54,489] 107 dagshub INFO - Repository BharatKumarNaik/NetworkSecurityML initialized!
+[2026-05-25 23:09:54,489] 16 root INFO - Initiate Data Ingestion
+[2026-05-25 23:09:54,489] 73 root INFO - Initiating data ingestion
+[2026-05-25 23:10:04,784] 51 root INFO - Exporting feature store to artifact\2026-05-25-23-08-20\data_ingestion\feature_store\raw_data.csv
+[2026-05-25 23:10:04,794] 60 root INFO - Train set and test set are splitted with test size 0.2
+[2026-05-25 23:10:04,841] 65 root INFO - Exporting train set to artifact\2026-05-25-23-08-20\data_ingestion\ingested\train.csv
+[2026-05-25 23:10:04,858] 67 root INFO - Exporting test set to artifact\2026-05-25-23-08-20\data_ingestion\ingested\test.csv
+[2026-05-25 23:10:04,858] 19 root INFO - Data Ingestion Completed\u2705
+[2026-05-25 23:10:04,881] 23 root INFO - Initiate the data validation
+[2026-05-25 23:10:04,881] 68 root INFO - Starting Data Validation
+[2026-05-25 23:10:04,934] 32 root INFO - Required number of columns: 31
+[2026-05-25 23:10:04,934] 33 root INFO - DataFrame has 31 columns
+[2026-05-25 23:10:04,934] 32 root INFO - Required number of columns: 31
+[2026-05-25 23:10:04,934] 33 root INFO - DataFrame has 31 columns
+[2026-05-25 23:10:05,096] 26 root INFO - Data Validation Completed
+[2026-05-25 23:10:05,096] 53 root INFO - Entered initiate_data_transformation method of DataTransformation Class
+[2026-05-25 23:10:05,096] 55 root INFO - Starting Data Transformation
+[2026-05-25 23:10:05,128] 41 root INFO - Entered get_data_transformer_object of DataTransformation class
+[2026-05-25 23:10:05,128] 45 root INFO - Initialized with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2026-05-25 23:10:05,150] 43 root INFO - Entered the save_object method
+[2026-05-25 23:10:05,153] 47 root INFO - Pickle file saved successfully
+[2026-05-25 23:10:05,153] 31 root INFO - Data Transformation Completed
+[2026-05-25 23:10:05,154] 141 root INFO - Model Trainer Initiated
+[2026-05-25 23:10:05,167] 65 root INFO - Models used are ['Random Forest', 'Decision Tree', 'Gradient Boosting', 'Logistic Regression', 'AdaBoost']
+[2026-05-25 23:10:05,167] 95 root INFO - Evaluating Models with hyper-parameters
+[2026-05-25 23:14:02,051] 105 root INFO - Best Model: Random Forest, Best Model Score: 0.9154527045225562
+[2026-05-25 23:14:50,254] 43 root INFO - Entered the save_object method
+[2026-05-25 23:14:50,254] 47 root INFO - Pickle file saved successfully
+[2026-05-25 23:14:50,254] 135 root INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='artifact\\2026-05-25-23-08-20\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9909562036378416, precision_score=0.989448051948052, recall_score=0.9924689599023), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9816, precision_score=0.9769108280254777, recall_score=0.9863344051446945))
+[2026-05-25 23:14:50,254] 38 root INFO - Model Training Completed
